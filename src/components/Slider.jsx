@@ -53,11 +53,11 @@ const Slider = () => {
 
     return (
         <div className="w-full flex z-[39]">
-            <div className="w-[85%] flex m-auto justify-between items-center">
-            <button className="bg-gray-800 text-white w-5 h-20 rounded-2xl font-extrabold"onClick={scrollToStart}>{"<"}</button>
+            <div className="w-[80%] flex m-auto justify-between items-center">
+            <button className="bg-gray-800 text-white w-8 h-30 rounded-xl font-bold-[800] text-3xl"onClick={scrollToStart}>{"<"}</button>
                 
                 {/* Scrollable container */}
-                <div className="w-[95%] overflow-hidden">
+                <div className="w-[95%] mx-2 overflow-hidden">
                     <div ref={scrollRef} className="flex overflow-x-auto whitespace-nowrap scrollbar-hide scroll-smooth">
                         {data.map((item, i) => (
                                 <SliderItem image_url={item.image_url} rank={i+1} key={i} />
@@ -65,7 +65,7 @@ const Slider = () => {
                     </div>
                 </div>
 
-                <button className="bg-gray-800 text-white w-5 h-20 rounded-2xl font-bold-[800]"onClick={scrollToEnd}>{">"}</button>
+                <button className="bg-gray-800 text-white w-8 h-30 rounded-xl font-bold-[800] text-3xl" onClick={scrollToEnd}>{">"}</button>
             </div>
         </div>
     );
